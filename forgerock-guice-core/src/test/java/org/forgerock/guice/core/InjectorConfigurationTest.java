@@ -12,6 +12,7 @@
  * information: "Portions copyright [year] [name of copyright owner]".
  *
  * Copyright 2014-2015 ForgeRock AS.
+ * Portions Copyright 2019 Open Source Solution Technology Corporation
  */
 
 package org.forgerock.guice.core;
@@ -22,6 +23,7 @@ import java.lang.annotation.Annotation;
 import java.util.Set;
 
 import com.google.inject.Module;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -35,6 +37,12 @@ public class InjectorConfigurationTest {
     public void setUpClass() {
         defaultAnnotation = InjectorConfiguration.getModuleAnnotation();
         defaultModuleLoader = InjectorConfiguration.getGuiceModuleLoader();
+    }
+
+    @AfterClass
+    public void tearDownClass() {
+        InjectorConfiguration.setModuleAnnotation(defaultAnnotation);
+        InjectorConfiguration.setGuiceModuleLoader(defaultModuleLoader);
     }
 
     @BeforeMethod
