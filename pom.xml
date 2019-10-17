@@ -14,6 +14,7 @@ information: "Portions Copyrighted [year] [name of copyright owner]".
 
 Copyright 2014-2015 ForgeRock AS.
 Portions Copyrighted 2019 Open Source Solution Technology Corporation
+Portions Copyrighted 2019 OGIS-RI Co., Ltd.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
@@ -54,11 +55,6 @@ Portions Copyrighted 2019 Open Source Solution Technology Corporation
         <url>https://github.com/openam-jp/forgerock-guice</url>
     </scm>
 
-    <properties>
-        <guice.version>3.0</guice.version>
-        <servlet.api.version>2.5</servlet.api.version>
-    </properties>
-
     <modules>
         <module>forgerock-guice-core</module>
         <module>forgerock-guice-servlet</module>
@@ -73,6 +69,7 @@ Portions Copyrighted 2019 Open Source Solution Technology Corporation
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
@@ -106,32 +103,6 @@ Portions Copyrighted 2019 Open Source Solution Technology Corporation
                 <groupId>jp.openam.commons</groupId>
                 <artifactId>forgerock-guice-servlet</artifactId>
                 <version>${project.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.google.inject</groupId>
-                <artifactId>guice</artifactId>
-                <version>${guice.version}</version>
-                <!-- Exclude aopalliance dependency due to ambiguous licensing. -->
-                <classifier>no_aop</classifier>
-                <exclusions>
-                    <exclusion>
-                        <groupId>aopalliance</groupId>
-                        <artifactId>aopalliance</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>servlet-api</artifactId>
-                <version>${servlet.api.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-nop</artifactId>
-                <version>1.7.12</version>
-                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
