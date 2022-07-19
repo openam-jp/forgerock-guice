@@ -13,7 +13,7 @@ Header, with the fields enclosed by brackets [] replaced by your own identifying
 information: "Portions Copyrighted [year] [name of copyright owner]".
 
 Copyright 2014-2015 ForgeRock AS.
-Portions Copyrighted 2019-2020 Open Source Solution Technology Corporation
+Portions Copyrighted 2019-2022 OSSTech Corporation
 Portions Copyrighted 2019 OGIS-RI Co., Ltd.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -54,6 +54,36 @@ Portions Copyrighted 2019 OGIS-RI Co., Ltd.
         <developerConnection>scm:git:git@github.com:openam-jp/forgerock-guice.git</developerConnection>
         <url>https://github.com/openam-jp/forgerock-guice</url>
     </scm>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/openam-jp/forgerock-guice</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/openam-jp/forgerock-guice</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/openam-jp/forgerock-guice</url>
+        </repository>
+    </distributionManagement>
 
     <modules>
         <module>forgerock-guice-core</module>
