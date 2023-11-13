@@ -13,7 +13,7 @@ Header, with the fields enclosed by brackets [] replaced by your own identifying
 information: "Portions Copyrighted [year] [name of copyright owner]".
 
 Copyright 2014-2015 ForgeRock AS.
-Portions Copyrighted 2019 Open Source Solution Technology Corporation
+Portions Copyrighted 2019-2023 OSSTech Corporation
 Portions Copyrighted 2019 OGIS-RI Co., Ltd.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -22,12 +22,12 @@ Portions Copyrighted 2019 OGIS-RI Co., Ltd.
     <parent>
         <groupId>jp.openam</groupId>
         <artifactId>forgerock-parent</artifactId>
-        <version>2.0.7</version>
+        <version>2.0.7.1</version>
     </parent>
 
     <groupId>jp.openam.commons</groupId>
     <artifactId>forgerock-guice</artifactId>
-    <version>1.1.1</version>
+    <version>1.1.1.1</version>
     <packaging>pom</packaging>
 
     <name>ForgeRock Guice Library</name>
@@ -53,7 +53,7 @@ Portions Copyrighted 2019 OGIS-RI Co., Ltd.
         <connection>scm:git:https://github.com/openam-jp/forgerock-guice.git</connection>
         <developerConnection>scm:git:git@github.com:openam-jp/forgerock-guice.git</developerConnection>
         <url>https://github.com/openam-jp/forgerock-guice</url>
-      <tag>1.1.1</tag>
+      <tag>1.1.1.1</tag>
   </scm>
 
     <modules>
@@ -91,7 +91,7 @@ Portions Copyrighted 2019 OGIS-RI Co., Ltd.
             <dependency>
                 <groupId>jp.openam.commons</groupId>
                 <artifactId>forgerock-bom</artifactId>
-                <version>4.1.2</version>
+                <version>4.1.2.1</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
